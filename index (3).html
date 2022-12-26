@@ -1,0 +1,152 @@
+<!doctype html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Swiper demo</title>
+        <meta
+                name="viewport"
+                content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+        />
+        <!-- Link Swiper's CSS -->
+        <link
+                rel="stylesheet"
+                href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+        />
+</head>
+<body>
+
+
+<style>
+
+
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 100px 0 0 0;
+}
+.hero{
+    height: 100vh;
+    background:  linear-gradient(to bottom, rgba(0,0,0,0)  , rgba(0,0,0,0) ) ,
+    url('./9-90116_transparent-paint-colors-clipart-colour-paint-image-png.png') no-repeat;
+    background-size: cover;
+}
+</style>
+<div class="hero">
+
+</div>
+<div class="container">
+    <div class="swiper mySwiper">
+
+        <div class="swiper-wrapper grid-container">
+
+            <div class="swiper-slide">
+                <img src="./9-90116_transparent-paint-colors-clipart-colour-paint-image-png.png" alt="" class="swiper-slide-img">1
+            </div>
+            <div class="swiper-slide">
+                <img src="./9-90116_transparent-paint-colors-clipart-colour-paint-image-png.png" alt="" class="swiper-slide-img">2
+            </div>
+            <div class="swiper-slide">
+                <img src="./9-90116_transparent-paint-colors-clipart-colour-paint-image-png.png" alt="" class="swiper-slide-img">3
+            </div>
+            <div class="swiper-slide">
+                <img src="./9-90116_transparent-paint-colors-clipart-colour-paint-image-png.png" alt="" class="swiper-slide-img">4
+            </div>
+            <div class="swiper-slide">
+                <img src="./9-90116_transparent-paint-colors-clipart-colour-paint-image-png.png" alt="" class="swiper-slide-img">5
+            </div>
+            <div class="swiper-slide">
+                <img src="./9-90116_transparent-paint-colors-clipart-colour-paint-image-png.png" alt="" class="swiper-slide-img">6
+            </div>
+            <div class="swiper-slide">
+                <img src="./9-90116_transparent-paint-colors-clipart-colour-paint-image-png.png" alt="" class="swiper-slide-img">
+            </div>  <div class="swiper-slide">
+            <img src="./9-90116_transparent-paint-colors-clipart-colour-paint-image-png.png" alt="" class="swiper-slide-img">
+        </div>  <div class="swiper-slide">
+            <img src="./9-90116_transparent-paint-colors-clipart-colour-paint-image-png.png" alt="" class="swiper-slide-img">
+        </div>  <div class="swiper-slide">
+            <img src="./9-90116_transparent-paint-colors-clipart-colour-paint-image-png.png" alt="" class="swiper-slide-img">
+        </div>  <div class="swiper-slide">
+            <img src="./9-90116_transparent-paint-colors-clipart-colour-paint-image-png.png" alt="" class="swiper-slide-img">
+        </div>  <div class="swiper-slide">
+            <img src="./9-90116_transparent-paint-colors-clipart-colour-paint-image-png.png" alt="" class="swiper-slide-img">
+        </div>  <div class="swiper-slide">
+            <img src="./9-90116_transparent-paint-colors-clipart-colour-paint-image-png.png" alt="" class="swiper-slide-img">
+        </div>  <div class="swiper-slide">
+            <img src="./9-90116_transparent-paint-colors-clipart-colour-paint-image-png.png" alt="" class="swiper-slide-img">
+        </div>  <div class="swiper-slide">
+            <img src="./9-90116_transparent-paint-colors-clipart-colour-paint-image-png.png" alt="" class="swiper-slide-img">
+        </div>  <div class="swiper-slide">
+            <img src="./9-90116_transparent-paint-colors-clipart-colour-paint-image-png.png" alt="" class="swiper-slide-img">
+        </div>  <div class="swiper-slide">
+            <img src="./9-90116_transparent-paint-colors-clipart-colour-paint-image-png.png" alt="" class="swiper-slide-img">
+        </div>
+
+
+        </div>
+
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+<script>
+    const div = document.querySelector('.hero');
+    const maxScrollTop = (document.body.clientHeight - window.innerHeight/1.8);
+
+    window.addEventListener('scroll', () => {
+        let opacity = window.pageYOffset/maxScrollTop;
+        if(opacity <=0.9){
+            opacity = window.pageYOffset/maxScrollTop;
+        }else{
+            opacity = 0.9;
+        }
+
+        div.style.background = `linear-gradient(to bottom, rgba(0,0,0,${opacity })  , rgba(0,0,0,${opacity }) ) ,
+    url('./9-90116_transparent-paint-colors-clipart-colour-paint-image-png.png') no-repeat`;
+        div.style.backgroundSize= "cover";
+
+    });
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script type="module">
+    import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js'
+
+    const mySwiper = new Swiper('.mySwiper', {
+
+        slidesPerView: 3,
+        spaceBetween: 30,
+        grid: {
+            rows: 2,
+            fill:"row",
+        },
+        breakpoints: {
+        1450: {
+
+            slidesPerView: 3,
+
+            spaceBetween: 30,
+            grid: {
+                rows: 2,
+                fill:"row",
+            },
+        },
+        900: {
+
+                slidesPerView: 2,
+                slidesPerColumn: 2,
+                slidesPerGroup :2,
+                spaceBetween: 30,
+                grid: {
+                    rows: 2,
+                    fill:"row",
+                },
+            }
+
+        },
+    });
+
+
+</script>
+
+</body>
+</html>
